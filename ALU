@@ -5,13 +5,13 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_Arith.ALL;
 use IEEE.STD_LOGIC_Unsigned.ALL;
-entity ishan_alu is
+entity alu is
     Port ( a,b : in  STD_LOGIC_VECTOR (3 downto 0);
            sel : in  STD_LOGIC_VECTOR (2 downto 0);
            op : out  STD_LOGIC_VECTOR (3 downto 0));
-end ishan_alu;
+end alu;
 
-architecture Behavioral of ishan_alu is
+architecture Behavioral of alu is
 
 begin
   process(a,b,sel)
@@ -43,14 +43,14 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
  
-ENTITY ishan_alu_tb IS
-END ishan_alu_tb;
+ENTITY alu_tb IS
+END alu_tb;
  
-ARCHITECTURE behavior OF ishan_alu_tb IS 
+ARCHITECTURE behavior OF alu_tb IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT ishan_alu
+    COMPONENT alu
     PORT(
          a : IN  std_logic_vector(3 downto 0);
          b : IN  std_logic_vector(3 downto 0);
@@ -74,7 +74,7 @@ ARCHITECTURE behavior OF ishan_alu_tb IS
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: ishan_alu PORT MAP (
+   uut: alu PORT MAP (
           a => a,
           b => b,
           sel => sel,
