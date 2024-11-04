@@ -6,15 +6,15 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 
 
-entity ishan is
+entity F_A is
     Port ( a : in  STD_LOGIC;
            b : in  STD_LOGIC;
            cin : in  STD_LOGIC;
            s : out  STD_LOGIC;
            co : out  STD_LOGIC);
-end ishan;
+end F_A;
 
-architecture Behavioral of ishan is
+architecture Behavioral of F_A is
 
 begin
 s <= a xor b xor cin ;
@@ -32,14 +32,14 @@ TEST BENCH
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
  
-ENTITY ishan_tb IS
-END ishan_tb;
+ENTITY F_A_tb IS
+END F_A_tb;
  
-ARCHITECTURE behavior OF ishan_tb IS 
+ARCHITECTURE behavior OF F_A_tb IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT ishan
+    COMPONENT F_A
     PORT(
          a : IN  std_logic;
          b : IN  std_logic;
@@ -66,7 +66,7 @@ ARCHITECTURE behavior OF ishan_tb IS
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: ishan PORT MAP (
+   uut: F_A PORT MAP (
           a => a,
           b => b,
           cin => cin,
