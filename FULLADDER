@@ -3,9 +3,6 @@ VHDL
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
-
-
 entity F_A is
     Port ( a : in  STD_LOGIC;
            b : in  STD_LOGIC;
@@ -20,9 +17,7 @@ begin
 s <= a xor b xor cin ;
 co <= ((a and b) or ( b and cin) or (a and cin));
 
-
 end Behavioral;
-
 
 
 
